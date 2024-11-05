@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Carrito de Compras</title>
+</head>
+
+<body>
+    <main class="container mt-5">
+        <div class="row text-center">
+            <!-- Productos -->
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresas</h5>
+                        <p class="lead">$300</p>
+                        <button class="btn btn-primary btn-sm" data-fruta="fresas" data-precio="300">Agregar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Naranjas</h5>
+                        <p class="lead">$100</p>
+                        <button class="btn btn-primary btn-sm" data-fruta="naranjas" data-precio="100">Agregar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Uvas</h5>
+                        <p class="lead">$200</p>
+                        <button class="btn btn-primary btn-sm" data-fruta="uvas" data-precio="200">Agregar</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="container mt-3">
+        <ul class="list-group" id="carrito"></ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="container mt-3">
+        <div class="card d-none" id="footerCard">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <p class="lead mb-0">TOTAL A PAGAR: $<span id="totalAmount">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Template para los elementos del carrito -->
+    <template id="template">
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-secondary text-white">
+            <div>
+                <span class="lead"></span> <!-- Nombre del producto -->
+                <span class="badge bg-primary rounded-pill">1</span> <!-- Cantidad -->
+            </div>
+            <div>
+                <span>Total: $<span>0</span></span> <!-- Subtotal -->
+                <button class="btn btn-sm btn-success ms-2">Agregar</button>
+                <button class="btn btn-sm btn-danger ms-2">Quitar</button>
+            </div>
+        </li>
+    </template>
+
+    <script src="/CarritodeCompras.js"></script>
+</body>
+
+</html>
